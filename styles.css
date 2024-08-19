@@ -1,0 +1,254 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #2e3a4b; /* Dark blue for the header */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headertab {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.headertab a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.headertab a:hover {
+    background-color: #1c2a3a; /* Slightly darker blue on hover */
+    color: #f0f0f0;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 20px;
+    background-color: #1e2a38; /* Darker blue background */
+    color: white;
+    align-items: center;
+}
+
+.hero_left {
+    max-width: 50%;
+    text-align: left;
+}
+
+.hero_left h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero_left h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.hero_left p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.hero_left button {
+    background-color: #ff5a5f; /* Bright red for call-to-action */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.hero_left button:hover {
+    background-color: #e04b50;
+}
+
+.hero_right img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.name_section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #2e3a4b; /* Consistent with header */
+    color: white;
+    border-bottom: 4px solid #ff5a5f; /* Accent color */
+}
+
+.name_section h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.name_section h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.name_section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.name_section button {
+    background-color: #ff5a5f; /* Consistent call-to-action color */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.name_section button:hover {
+    background-color: #e04b50;
+}
+
+#roles-responsibility, #projects, #skills, #Certifications {
+    padding: 60px 20px;
+}
+
+#roles-responsibility h2, #projects h2, #skills h2, #Certifications h2 {
+    font-size: 2.5em;
+    border-bottom: 3px solid #2e3a4b;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    color: #2e3a4b;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill_component {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    flex: 1;
+    min-width: 250px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #2e3a4b;
+}
+
+.footer {
+    background-color: #2e3a4b;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+}
+
+.footer-col img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-col h1 {
+    font-size: 1.8em;
+    margin: 20px 0;
+}
+
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    padding: 10px 0;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+.icon_image {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero_right img {
+        width: 80%;
+    }
+
+    .skill_component {
+        flex-direction: column;
+    }
+}
