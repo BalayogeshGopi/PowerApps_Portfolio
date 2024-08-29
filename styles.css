@@ -13,12 +13,21 @@ header {
     padding: 15px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure positioning for responsive behavior */
 }
 
+.container {
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the content */
+    padding: 0 15px; /* Add some padding for smaller screens */
+}
+
+/* Header Section */
 .headertab {
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .headertab a {
@@ -26,7 +35,7 @@ header {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    padding: 10px 15px;
+    padding: 10px;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 5px;
 }
@@ -36,59 +45,64 @@ header {
     color: #f0f0f0;
 }
 
-.hero {
-    display: flex;
-    justify-content: space-between;
-    padding: 60px 20px;
-    background-color: #1e2a38; /* Darker blue background */
-    color: white;
-    align-items: center;
-}
+/* Hero Section */
+    .hero {
+        display: flex;
+       
+        padding: 20px;
+        background-color: #1e2a38;
+        color: white;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-.hero_left {
-    max-width: 50%;
-    text-align: left;
-}
+    .hero_left {
+        max-width: 50%;
+        text-align: left;
+        margin-left: 20px;
+    }
 
-.hero_left h1 {
-    font-size: 3em;
-    margin: 0;
-}
+    .hero_left h1 {
+        font-size: 3em;
+        margin: 0;
+    }
 
-.hero_left h2 {
-    font-size: 1.8em;
-    margin: 10px 0;
-}
+    .hero_left h2 {
+        font-size: 1.8em;
+        margin: 10px 0;
+    }
 
-.hero_left p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
+    .hero_left p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
 
-.hero_left button {
-    background-color: #ff5a5f; /* Bright red for call-to-action */
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.1em;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-}
+    .hero_left button {
+        background-color: #ff5a5f;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 1.1em;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color 0.3s;
+    }
 
-.hero_left button:hover {
-    background-color: #e04b50;
-}
+    .hero_left button:hover {
+        background-color: #e04b50;
+    }
 
-.hero_right img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
+    .hero_right .imgclass {
+       width: 300px;
+       height: 300px;
+    }
 
+
+
+/* Name Section */
 .name_section {
     text-align: center;
-    padding: 60px 20px;
+    padding: 10px;
     background-color: #2e3a4b; /* Consistent with header */
     color: white;
     border-bottom: 4px solid #ff5a5f; /* Accent color */
@@ -124,15 +138,15 @@ header {
     background-color: #e04b50;
 }
 
+/* Roles, Projects, Skills, Certifications Section */
 #roles-responsibility, #projects, #skills, #Certifications {
-    padding: 60px 20px;
+    padding:20px;
 }
 
 #roles-responsibility h2, #projects h2, #skills h2, #Certifications h2 {
     font-size: 2.5em;
     border-bottom: 3px solid #2e3a4b;
     padding-bottom: 15px;
-    margin-bottom: 30px;
     color: #2e3a4b;
 }
 
@@ -143,7 +157,7 @@ ul {
 
 ul li {
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    
 }
 
 .project-item {
@@ -176,10 +190,11 @@ ul li {
     color: #2e3a4b;
 }
 
+/* Footer */
 .footer {
     background-color: #2e3a4b;
     color: white;
-    padding: 40px 20px;
+    padding: 10px;
     text-align: center;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -206,7 +221,6 @@ ul li {
     margin: 20px 0;
 }
 
-
 .footer-col ul {
     list-style: none;
     padding: 0;
@@ -214,6 +228,7 @@ ul li {
 
 .footer-col ul li {
     padding: 10px 0;
+    
 }
 
 
@@ -221,6 +236,9 @@ ul li {
     display: flex;
     gap: 15px;
     justify-content: center;
+}
+.footer-col ul li a {
+    color: #ddd;
 }
 
 .social-links a {
@@ -238,17 +256,58 @@ ul li {
     height: 30px;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .hero {
+    .hero .container, .footer .container {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero_right img {
-        width: 80%;
+    .hero_left {
+        max-width: 100%; /* Ensure full width on smaller screens */
+        margin-bottom: 20px;
     }
 
-    .skill_component {
+    .hero_right img {
+        width: 80%;
+        margin: 20px auto; /* Center the image */
+    }
+
+    .headertab {
         flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0; /* Reduce padding for very small screens */
+    }
+
+    .hero_left h1 {
+        font-size: 2.5em;
+    }
+
+    .hero_left h2 {
+        font-size: 1.5em;
+    }
+
+    .hero_left p {
+        font-size: 1em;
+    }
+
+    .hero_left button {
+        font-size: 1em;
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .hero_right img {
+        
+    }
+
+    .headertab a {
+        font-size: 14px;
+        padding: 8px 12px;
     }
 }
